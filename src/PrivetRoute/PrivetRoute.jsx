@@ -7,6 +7,7 @@ const PrivetRoute = ({children}) => {
 
   const location = useLocation()
 
+
   if(loading){
     return <p>Loading...</p>
   }
@@ -15,7 +16,7 @@ const PrivetRoute = ({children}) => {
     return children
   }
 
-  return <Navigate to={'/login'} state={{from:location}} replace={true}/>
+  return <Navigate to={'/login'} state={{from:location}}/>
 }
 
 export default PrivetRoute
